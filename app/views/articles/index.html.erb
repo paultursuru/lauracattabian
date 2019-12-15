@@ -1,2 +1,13 @@
-<h1>Articles#index</h1>
-<p>Find me in app/views/articles/index.html.erb</p>
+<% @articles.each do |article| %>
+  <% if article.photo.attached? %>
+    <div class="article_card" style="background-image: linear-gradient(rgba(30,30,30, 0.3), rgba(40,40,40,0.3)), url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
+      <h1><%= article.title %></h1>
+      <%= article.subtitle %>
+    </div>
+  <% else %>
+    <div class="article_card">
+      <%= article.title %>
+      <%= article.subtitle %>
+    </div>
+  <% end %>
+<% end %>
