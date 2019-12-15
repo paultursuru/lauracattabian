@@ -1,0 +1,53 @@
+.nav-bar-left {
+  margin: 30px 50px;
+  h1, h4 {
+    color: black;
+  }
+  img {
+    width: 155px;
+    opacity: 0.7;
+    z-index: 0;
+    transform: rotate(-1deg);
+    transition: all 0.5s ease;
+  }
+  a:hover {
+    h5 {
+      color: white;
+    }
+    img {
+      opacity: 1;
+      width: 170px;
+      transform: rotate(1deg);
+      transition: all 0.5s ease;
+    }
+  }
+}
+
+.button {
+  position: relative;
+  padding: 5px 0;
+  h5 {
+    position: absolute;
+    top: 17px;
+    left: 26px;
+    color: white;
+    z-index: 1;
+  }
+}
+
+.blacktext {
+  h5 {
+    color: black;
+  }
+  &:hover {
+    a {
+      h5 {
+        color: black;
+      }
+    }
+  }
+}
+
+.menu {
+  margin-top: 40px;
+}

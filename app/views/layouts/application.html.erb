@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lauracattabian</title>
+    <title>Lauracatta</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex">
+      <div class="col-4">
+        <%= render 'layouts/left_bar' %>
+      </div>
+      <div class="col-6 d-flex flex-wrap main-content">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <% if article.category == 'Application' %>
+    <div class="article_card">
+      <%= article.title %>
+      <%= article.subtitle %>
+    </div>
+  <% end %>
+<% end %>
