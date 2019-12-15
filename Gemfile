@@ -29,6 +29,7 @@ gem 'turbolinks', '~> 5'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0'
 gem 'webpacker', '~> 4.x'
+gem 'dotenv-rails', groups: [:development, :test]
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
