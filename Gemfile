@@ -31,6 +31,7 @@ gem 'bootstrap', '~> 4.0'
 gem 'webpacker', '~> 4.x'
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'devise'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

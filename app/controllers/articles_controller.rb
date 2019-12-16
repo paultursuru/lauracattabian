@@ -1,12 +1,37 @@
 class ArticlesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
   before_action :set_article, only: %I[show, edit, update, destroy]
-  def index
-    @articles = Article.all
-    # raise
-  end
+
+  # actions for categories
 
   def applications
     @articles = Article.where(category: 'Application')
+  end
+
+  def actualites
+    @articles = Article.where(category: 'Actualite')
+  end
+
+  def ateliers
+    @articles = Article.where(category: 'Atelier')
+  end
+
+  def formations
+    @articles = Article.where(category: 'Formation')
+  end
+
+  def livres
+    @articles = Article.where(category: 'Livre')
+  end
+
+  def musiques
+    @articles = Article.where(category: 'Musique')
+  end
+
+  # CRUD for admin
+
+  def index
+    @articles = Article.all
   end
 
   def show
@@ -21,7 +46,7 @@ class ArticlesController < ApplicationController
     @article = Article.new(article_params)
 
     if @article.save
-      redirect_to articles_path
+      redirect_to article_path(@article)
     else
       render :new
     end
@@ -34,7 +59,7 @@ class ArticlesController < ApplicationController
   def update
     @article = Article.find(params[:id])
     if @article.update(article_params)
-      redirect_to articles_path
+      redirect_to article_path(@article)
     else
       render :edit
     end

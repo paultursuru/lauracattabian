@@ -14,9 +14,18 @@
       <div class="col-4">
         <%= render 'layouts/left_bar' %>
       </div>
-      <div class="col-6 d-flex flex-wrap main-content">
+      <div class="col-7 d-flex flex-wrap main-content">
         <%= yield %>
       </div>
+      <% if user_signed_in? %>
+        <div class="col">
+          <div class="btn btn-danger darklogout">
+            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          </div>
+          <!-- add more buttons here -->
+        </div>
+      <% end %>
     </div>
+    <%#= render 'layouts/flashes' %>
   </body>
 </html>

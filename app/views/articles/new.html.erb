@@ -2,7 +2,7 @@
     <%= f.input :title %>
     <%= f.input :subtitle %>
     <%= f.input :content %>
-    <%= f.input :category, as: :radio_buttons, collection: ['Application', 'Actualité', 'Archive']  %>
+    <%= f.input :category, as: :radio_buttons, collection: ['Application', 'Actualité', 'Atelier', 'Formation', 'Livre', 'Musique', 'Archive']  %>
     <%= f.input :photo, as: :file %>
     <%= f.button :submit, class: 'btn btn-outline-success' %>
 <% end %>

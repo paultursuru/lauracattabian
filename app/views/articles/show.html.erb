@@ -1,7 +1,5 @@
-
-
-<div class="card" style="background-image: linear-gradient(rgba(30,30,30,0.3), rgba(40,40,40,0.3)), url('<%= cl_image_path @article.photo.key, height: 300, width: 400, crop: :fill %>')">
+<div class="card">
   <h1><%= @article.title %></h1>
-
-  Cool article
+  <h3><%= @article.subtitle %></h3>
+  <p><%= @article.content %></p>
 </div>
