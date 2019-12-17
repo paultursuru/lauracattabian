@@ -4,6 +4,7 @@
       <h1><%= article.title %></h1>
       <%= article.subtitle %>
     </div>
+    <div><%= link_to "x", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
   <% else %>
     <div class="article_card">
       <%= article.title %>

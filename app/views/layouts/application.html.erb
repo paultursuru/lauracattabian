@@ -11,16 +11,22 @@
 
   <body>
     <div class="d-flex">
-      <div class="col-4">
+      <div class="col-3">
         <%= render 'layouts/left_bar' %>
       </div>
       <div class="col-7 d-flex flex-wrap main-content">
         <%= yield %>
       </div>
       <% if user_signed_in? %>
-        <div class="col">
+        <div class="col d-block text-center mt-5">
           <div class="btn btn-danger darklogout">
             <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+          </div>
+          <div class="btn btn-primary darklogout">
+            <%= link_to 'Edit articles', articles_path %>
+          </div>
+          <div class="btn btn-success darklogout">
+            <%= link_to 'Add article', new_article_path %>
           </div>
           <!-- add more buttons here -->
         </div>

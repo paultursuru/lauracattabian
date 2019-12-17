@@ -52,8 +52,35 @@
   margin-top: 40px;
 }
 .darklogout {
+  margin: 5px;
   a {
-    color: black;
+    color: white;
+    font-weight: 600;
     text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar-left {
+    h4 {
+      font-size: 19px;
+    }
+    h5 {
+      font-size: 15px;
+    }
+    .button h5 {
+      left: 20px;
+    }
+    img {
+      width: 120px;
+    }
+    a:hover {
+      img {
+        width: 150px;
+      }
+    }
+    .home-gif {
+      width: 600px;
+    }
   }
 }
