@@ -28,10 +28,13 @@ gem 'turbolinks', '~> 5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'simple_form'
 gem 'bootstrap', '~> 4.0'
-gem 'webpacker', '~> 4.x'
+gem 'webpacker', '~> 4.2'
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'devise'
+gem "actiontext", require: "action_text"
+gem "image_processing", "~> 1.2"
+gem 'trix-rails'
 # gem'actiontext',github:'kobaltz/actiontext',branch:'archive',require:'action_text'
 # gem 'image_processing'
 
