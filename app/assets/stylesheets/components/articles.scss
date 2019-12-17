@@ -38,17 +38,16 @@
   margin: 5px;
 }
 
-.new_article, .edit_article {
+form {
   width: 100%;
+  display: block;
 }
-fieldset {
-  display: flex;
+#article_subtitle {
+  margin-right: 20px;
 }
-.form-check {
-  padding-left: 2.25rem;
-}
-textarea.form-control {
+trix-editor {
   min-height: 200px;
+  border: #dfdfdf 2px solid;
 }
 
 

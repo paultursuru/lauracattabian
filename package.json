@@ -2,10 +2,13 @@
   "name": "lauracattabian",
   "private": true,
   "dependencies": {
+    "@rails/actiontext": "^6.0.2",
     "@rails/webpacker": "^4.2.2",
+    "actiontext": "https://github.com/kobaltz/actiontext",
     "bootstrap": "^4.4.1",
     "jquery": "^3.4.1",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.0",
+    "trix": "^1.0.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.9.0"
