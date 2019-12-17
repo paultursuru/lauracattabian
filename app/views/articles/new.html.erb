@@ -1,8 +1,33 @@
-<%= simple_form_for(@article) do |f| %>
-    <%= f.input :title %>
-    <%= f.input :subtitle %>
-    <%= f.input :content, as: :text %>
-    <%= f.input :category, as: :radio_buttons, collection: ['Application', 'Actualité', 'Atelier', 'Formation', 'Livre', 'Musique', 'Archive']  %>
-    <%= f.input :photo, as: :file %>
-    <%= f.button :submit, class: 'btn btn-outline-success' %>
+<%= form_for(@article)do |f| %>
+    <div>
+      <%= f.text_field :title, placeholder: "Title" %>
+      <%= f.text_field :subtitle, placeholder: "Subtitle" %>
+    </div>
+    <div class="my-4">
+      <%= f.rich_text_area :content %>
+    </div>
+    <div>
+      <%= f.radio_button :category, 'Application' %>
+      <%= label :category_application, 'Application' %>
+      <%= f.radio_button :category, 'Actualité' %>
+      <%= label :category_actualite, 'Actualité' %>
+      <%= f.radio_button :category, 'Atelier' %>
+      <%= label :category_atelier, 'Atelier' %>
+      <%= f.radio_button :category, 'Formation' %>
+      <%= label :category_formation, 'Formation' %>
+      <%= f.radio_button :category, 'Livre' %>
+      <%= label :category_livre, 'Livre' %>
+      <%= f.radio_button :category, 'Musique' %>
+      <%= label :category_musique, 'Musique' %>
+      <%= f.radio_button :category, 'Archive' %>
+      <%= label :category_archive, 'Archive' %>
+    </div>
+    <%= f.file_field :photo, as: :file %>
+    <div class="my-4">
+      <%= f.button :submit, class: 'btn btn-outline-success' %>
+    </div>
 <% end %>
+
+
+
+
