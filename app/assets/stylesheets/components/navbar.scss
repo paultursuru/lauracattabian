@@ -60,10 +60,16 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+.options {
+  display: block;
+}
+
+@media screen and (max-width: 1024px) {
   .nav-bar-left {
-    h4 {
+    .logo {
+      h4 {
       font-size: 19px;
+      }
     }
     h5 {
       font-size: 15px;
@@ -79,8 +85,16 @@
         width: 150px;
       }
     }
-    .home-gif {
-      width: 600px;
+    .logo {
+      width: 200px;
+    }
+  }
+  .options {
+    right: 110px;
+    display: flex;
+    height: 50px;
+    a {
+      font-size: 10px;
     }
   }
 }

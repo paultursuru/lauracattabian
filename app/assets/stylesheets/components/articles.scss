@@ -21,8 +21,10 @@
   padding: 10px;
   box-shadow: 0 0 10px rgba(20, 20, 20, 0.3);
   border-radius: 5px;
+  width: 100%;
   img {
     margin: 30px 0;
+    width: 90%;
   }
 }
 
@@ -47,4 +49,11 @@ fieldset {
 }
 textarea.form-control {
   min-height: 200px;
+}
+
+
+@media screen and (max-width: 768px) {
+  fieldset {
+    flex-wrap: wrap;
+  }
 }
