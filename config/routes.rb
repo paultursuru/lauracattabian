@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root 'welcome#index'
   get 'welcome/index'
+  get 'welcome/bio'
+  get 'welcome/contact'
+
+  get 'articles/partenaires'
   get 'articles/applications'
   get 'articles/actualites'
   get 'articles/ateliers'

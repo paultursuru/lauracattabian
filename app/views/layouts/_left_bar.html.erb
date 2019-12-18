@@ -50,10 +50,10 @@
     </div>
 
     <div id="but7" class="button blacktext">
-      <a href="#">
-      <h5>Partenaires</h5>
-      <%= image_tag "pave7", alt: "buttonbg" %>
-      </a>
+      <%= link_to articles_partenaires_path do %>
+        <h5>Partenaires</h5>
+        <%= image_tag "pave7", alt: "buttonbg" %>
+      <% end %>
     </div>
 
     <div id="but8" class="button blacktext">

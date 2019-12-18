@@ -1,0 +1,8 @@
+<% @articles.each do |article| %>
+  <%= link_to article.subtitle, :target => "_blank" do %>
+    <div class="d-block text-center">
+      <div class="article_card text-center" style="background-image: url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')"></div>
+      <h5 class="text-dark"><%= article.title %></h5>
+    </div>
+  <% end %>
+<% end %>

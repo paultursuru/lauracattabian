@@ -1,10 +1,10 @@
 <% @articles.each do |article| %>
-  <% if article.category == 'Application' %>
+  <%# if article.category == 'Application' %>
     <%= link_to article_path(article) do  %>
       <div class="article_card text-center" style="background-image: linear-gradient(rgba(30,30,30,0.3), rgba(40,40,40,0.3)), url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
         <h5><%= article.title %></h5>
         <%= article.subtitle %>
       </div>
     <% end %>
-  <% end %>
+  <%# end %>
 <% end %>

@@ -1,8 +1,11 @@
 class ArticlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
+  skip_before_action :authenticate_user!, only: [:partenaires, :applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
   before_action :set_article, only: %I[show, edit, update, destroy]
 
   # actions for categories
+  def partenaires
+    @articles = Article.where(category: 'Partenaire')
+  end
 
   def applications
     @articles = Article.where(category: 'Application')

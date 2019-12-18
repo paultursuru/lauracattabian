@@ -1,5 +1,5 @@
 class Article < ApplicationRecord
   has_one_attached :photo
   has_rich_text :content
-  validates :title, :subtitle, :content, presence: true
+  validates :title, :subtitle, :category, :photo, presence: true
 end
