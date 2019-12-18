@@ -1,6 +1,10 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+a {
+  text-decoration: none !important;
+}
+
 .article_card {
   width: 200px;
   height: 200px;
@@ -11,6 +15,19 @@
   color: white;
 }
 
+.partenaire_card {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(10, 10, 10, 0.1);
+  border-radius: 10px;
+}
+
+.card_block {
+  width: 240px;
+  height: 270px;
+}
 .main-content {
   margin-top: 230px;
 }

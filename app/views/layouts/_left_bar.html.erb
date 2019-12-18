@@ -57,17 +57,17 @@
     </div>
 
     <div id="but8" class="button blacktext">
-      <a href="#">
-      <h5>Qui suis-je ?</h5>
-      <%= image_tag "pave8", alt: "buttonbg" %>
-      </a>
+      <%= link_to welcome_bio_path do  %>
+        <h5>Qui suis-je ?</h5>
+        <%= image_tag "pave8", alt: "buttonbg" %>
+      <% end %>
     </div>
 
     <div id="but9" class="button blacktext">
-      <a href="#">
-      <h5>Contact</h5>
-      <%= image_tag "pave9", alt: "buttonbg" %>
-      </a>
+      <%= link_to welcome_contact_path do  %>
+        <h5>Contact</h5>
+        <%= image_tag "pave9", alt: "buttonbg" %>
+      <% end %>
     </div>
   </div>
 </div>
