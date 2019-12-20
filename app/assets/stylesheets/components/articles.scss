@@ -68,8 +68,12 @@ trix-editor {
 }
 
 
-@media screen and (max-width: 768px) {
-  fieldset {
-    flex-wrap: wrap;
+@media screen and (max-width: 414px) {
+  // fieldset {
+  //   flex-wrap: wrap;
+  // }
+  .article_card {
+    width: 100px;
+    height: 100px;
   }
 }

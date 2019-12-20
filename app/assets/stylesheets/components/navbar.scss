@@ -89,13 +89,15 @@ body {
 
 @media screen and (max-width: 1024px) {
   .nav-bar-left {
+    margin: 30px;
     .logo {
+      width: main-content;
       h4 {
       font-size: 19px;
       }
     }
     h5 {
-      font-size: 15px;
+      font-size: 14px;
     }
     .button h5 {
       left: 20px;
@@ -109,7 +111,7 @@ body {
         width: 150px;
       }
       h5 {
-        font-size: 22px;
+        font-size: 19px;
         left: 20px;
       }
     }
