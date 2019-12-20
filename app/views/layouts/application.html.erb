@@ -4,7 +4,7 @@
     <title>Lauracatta</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
@@ -19,7 +19,7 @@
         <%= yield %>
       </div>
       <% if user_signed_in? %>
-        <div class="col text-center mt-5 options">
+        <div class="col mt-5 options">
           <div class="btn btn-danger darklogout">
             <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
           </div>
