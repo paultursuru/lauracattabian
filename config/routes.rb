@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'articles/musiques'
 
   # resources :articles, only: :show
-
+  resources "contacts", only: [:new, :create]
   # namespace :admin do
   resources :articles
   # end

@@ -36,6 +36,7 @@ gem 'devise'
 gem "actiontext", require: "action_text"
 gem "image_processing", "~> 1.2"
 gem 'trix-rails'
+gem 'mail_form'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
