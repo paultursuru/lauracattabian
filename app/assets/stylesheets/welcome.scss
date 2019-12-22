@@ -17,10 +17,32 @@
 
 @media screen and (max-width: 800px) {
   .home-card {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
     img {
-      width: 50%;
       transform: rotate(90deg);
       margin-left: 0;
+      width: 235%;
+      position: absolute;
+      left: -180px;
+      top: 225px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-card {
+    width: 100%;
+    position: relative;
+    margin-top: 0;
+    img {
+      transform: rotate(90deg);
+      margin-left: 0;
+      width: 235%;
+      position: absolute;
+      left: -109px;
+      top: 110px;
     }
   }
 }
