@@ -85,7 +85,6 @@ trix-editor {
 }
 
 
-
 @media screen and (max-width: 1024px) {
   .partenaire_img {
     height: 160px;
@@ -102,8 +101,11 @@ trix-editor {
   .cards-set {
     display: flex;
     flex-wrap: wrap;
+    width: 100%;
   }
 }
+
+
 
 @media screen and (max-width: 500px) {
   .article_card {

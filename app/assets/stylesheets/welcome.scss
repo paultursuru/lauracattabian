@@ -6,6 +6,16 @@
   margin-top: 150px;
 }
 
+@media screen and (max-width: 1248px ){
+  .home-card {
+    margin-top: 0;
+    width: 90vh;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .home-card {
     img {
@@ -41,8 +51,8 @@
       margin-left: 0;
       width: 235%;
       position: absolute;
-      left: -109px;
-      top: 110px;
+      left: -150px;
+      top: 145px;
     }
   }
 }
