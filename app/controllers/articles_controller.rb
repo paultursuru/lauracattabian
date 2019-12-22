@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def actualites
-    @articles = Article.where(category: 'Actualite')
+    @articles = Article.where(category: 'Actualité')
   end
 
   def ateliers
