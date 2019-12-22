@@ -79,13 +79,68 @@ trix-editor {
   border: #dfdfdf 2px solid;
 }
 
+// contact simple form !
+#new_contact {
+  width: 80%;
+}
 
-@media screen and (max-width: 414px) {
-  // fieldset {
-  //   flex-wrap: wrap;
-  // }
+
+
+@media screen and (max-width: 1024px) {
+  .partenaire_img {
+    height: 160px;
+    width: 160px;
+  }
+
+  .card_block {
+    width: 170px;
+    height: 200px;
+    padding: 0px;
+    margin: 0px 3px 20px 3px;
+  }
+
+  .cards-set {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .article_card {
     width: 100px;
     height: 100px;
   }
+
+  .main-content {
+    position: relative;
+    margin-top: 0;
+  }
+  .cards-set {
+    position: absolute;
+    top: 160px;
+  }
+  .white-gradient-top {
+    position: fixed;
+    z-index: 1;
+    width: 240px;
+    height: 175px;
+    background: linear-gradient(white 75%, transparent);
+    right: 0;
+  }
+
+  // mail form on phone
+
+  h3 {
+    font-size: 20px;
+  }
+  .form-group label {
+    font-size: 12px;
+  }
+  .form-group input {
+    font-size: 12px;
+  }
+  label {
+    margin-bottom: 0;
+  }
+
 }

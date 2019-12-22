@@ -17,7 +17,10 @@
         <%= render 'layouts/left_bar' %>
       </div>
       <div class="col-6 col-md-6 col-lg-7 d-flex flex-wrap main-content">
-        <%= yield %>
+        <div class="white-gradient-top"></div>
+        <div class="cards-set">
+          <%= yield %>
+        </div>
       </div>
       <% if user_signed_in? %>
         <div class="col mt-5 options">
