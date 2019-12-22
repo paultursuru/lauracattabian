@@ -45,9 +45,17 @@ a {
   margin-top: 230px;
 }
 
+.cards-set {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .article_show {
   align-items: center;
   justify-content: center;
+  text-align: center;
+  background: white;
   padding: 10px;
   box-shadow: 0 0 10px rgba(20, 20, 20, 0.3);
   border-radius: 5px;
@@ -99,11 +107,6 @@ trix-editor {
     margin: 0px 3px 20px 3px;
   }
 
-  .cards-set {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
 }
 
 

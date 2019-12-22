@@ -24,6 +24,7 @@ body {
       transform: rotate(3deg);
       transition: all 0.5s ease;
       left: 100px;
+      width: max-content;
     }
     img {
       opacity: 1;
@@ -38,6 +39,7 @@ body {
   position: relative;
   padding: 0px 0;
   margin: -9px;
+  z-index: 1;
   h5 {
     position: absolute;
     top: 17px;
