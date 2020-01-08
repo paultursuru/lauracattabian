@@ -98,6 +98,24 @@ trix-editor {
   width: 80%;
 }
 
+// bio page
+.bio-card {
+  width: 100vh;
+  box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  height: max-content;
+  display: block;
+  text-align: center;
+  img {
+    width: 170px;
+  }
+}
+.legend {
+  font-style: italic;
+  font-size: 8px;
+  margin-bottom: 30px;
+}
 
 @media screen and (max-width: 1024px) {
   .partenaire_img {
