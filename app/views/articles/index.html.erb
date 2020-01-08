@@ -1,21 +1,10 @@
 <% @articles.each do |article| %>
-  <% if article.photo.attached? %>
-    <div class="article_card" style="background-image: linear-gradient(rgba(30,30,30, 0.3), rgba(40,40,40,0.3)), url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
-      <h1><%= article.title %></h1>
-      <%= article.subtitle %>
-      <div class="d-block action-block">
-        <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
-        <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
-      </div>
+  <div class="article_card" style="background-image: linear-gradient(rgba(30,30,30, 0.3), rgba(40,40,40,0.3)), url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
+    <h1><%= article.title %></h1>
+    <%= article.subtitle %>
+    <div class="d-block action-block">
+      <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
+      <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
     </div>
-  <% else %>
-    <div class="article_card">
-      <%= article.title %>
-      <%= article.subtitle %>
-      <div class="d-block action-block">
-        <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
-        <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
-      </div>
-    </div>
-  <% end %>
+  </div>
 <% end %>
