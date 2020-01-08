@@ -162,11 +162,12 @@ trix-editor {
   .article_card {
     width: 150px;
     height: 150px;
-    display: block;
+    display: flex;
     justify-content: center;
+    margin: 20px;
     .title {
       display: flex;
-      font-size: 14px;
+      font-size: 20px;
       align-items: center;
     }
     .subtitle {
@@ -192,26 +193,35 @@ trix-editor {
     right: 0;
   }
 
+  .image-alone {
+    img {
+      width: 100%;
+      margin-top: 35px;
+    }
+  }
+
   // show view
 
-  .article_show {
+  .article-show {
     text-align: center;
     position: relative;
     right: 10px;
     margin-bottom: 20px;
+    padding: 10px;
     h1 {
-      font-size: 20px;
+      font-size: 25px;
     }
     h3 {
-      font-size: 14px;
+      font-size: 15px;
     }
     p {
       display: none;
     }
     .trix-content {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
+
 
   // mail form on phone
 
@@ -227,5 +237,20 @@ trix-editor {
   label {
     margin-bottom: 0;
   }
+
+
+
+  .bio-card {
+    padding: 10px;
+    margin-bottom: 20px;
+    position: relative;
+    right: 10px;
+
+  img {
+    width: 150px;
+  }
+}
+
+
 
 }
