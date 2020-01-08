@@ -1,6 +1,9 @@
 <div class="article-show">
   <h1><%= @article.title %></h1>
   <h3><%= @article.subtitle %></h3>
+  <% if @article.category == 'Actualité' %>
+    <p class="posted-date"><%=  @article.created_at.strftime("Posted on %m/%d/%Y") %></p>
+  <% end %>
   <%= cl_image_tag @article.photo.key%>
   <% if @article.legend %>
     <p class="legend">
@@ -8,4 +11,9 @@
     </p>
   <% end %>
   <p><%= @article.content %></p>
+  <% if @article.category == 'Formation' || @article.category == 'Atelier' %>
+    <%= link_to new_contact_path do  %>
+      <p class="btn btn-outline-dark contact-link-show">✏️ Vous voulez plus d'infos ? Ecrivez moi ! ✉️</p>
+    <% end %>
+  <% end %>
 </div>
