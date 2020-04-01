@@ -6,15 +6,29 @@ a {
 }
 
 .article_card {
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   text-align: center;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
+  border-radius: 5px;
+  // box-shadow: 0 0 10px rgba(10, 10, 10, 0.3);
   margin: 20px 50px 20px 20px;
   padding: 10px;
-  color: white;
+  color: black;
   position: relative;
+  border: solid 7px #4cab72;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .title, .subtitle {
+    display: none;
+  }
+  &:hover {
+    opacity: 0.5;
+    .title, .subtitle {
+      display: block;
+      font-weight: bold;
+    }
+  }
 }
 
 
