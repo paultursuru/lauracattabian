@@ -4,3 +4,5 @@ console.log("You can find me on github <3")
 
 require("@rails/actiontext")
 require("trix")
+
+import 'bootstrap'
