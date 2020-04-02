@@ -4,32 +4,32 @@ class ArticlesController < ApplicationController
 
   # actions for categories
   def partenaires
-    @articles = Article.where(category: 'Partenaire')
+    @articles = Article.where(category: 'partenaire')
   end
 
   def applications
-    @articles = Article.where(category: 'Application')
+    @articles = Article.where(category: 'apps')
   end
 
   def actualites
-    @articles = Article.where(category: 'Actualité')
+    @articles = Article.where(category: 'actu')
   end
 
   def ateliers
-    @articles = Article.where(category: 'Atelier')
+    @articles = Article.where(category: 'atelier')
   end
 
   def formations
-    @articles = Article.where(category: 'Formation')
+    @articles = Article.where(category: 'formation')
   end
 
-  def livres
-    @articles = Article.where(category: 'Livre')
-  end
+  # def livres
+  #   @articles = Article.where(category: 'Livre')
+  # end
 
-  def musiques
-    @articles = Article.where(category: 'Musique')
-  end
+  # def musiques
+  #   @articles = Article.where(category: 'Musique')
+  # end
 
   # CRUD for admin
 

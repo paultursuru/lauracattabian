@@ -1,8 +1,19 @@
-body {
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 .nav-bar-left {
+  width: 25%;
+  a:hover {
+    text-decoration: none;
+  }
+  .home-btn {
+    color: black;
+    font-size: 40px;
+    &:hover {
+      color: black;
+    }
+  }
+
+
   #but3 h5 {
     top: 12px;
   }
@@ -10,7 +21,6 @@ body {
     top: 13px;
   }
 
-  margin: 70px 50px 30px 70px;
   h1, h4 {
     color: black;
   }
@@ -85,7 +95,9 @@ body {
   margin: 5px;
   font-size: 12px;
   display: block;
-  width: 90px;
+  width: 120px;
+  text-align: center;
+  padding: 5px 10px;
   a {
     color: white;
     font-weight: 600;
@@ -94,9 +106,7 @@ body {
 }
 
 .options {
-  display: grid;
-  justify-content: end;
-  height: max-content;
+  margin: 50px 0 0 0;
 }
 
 

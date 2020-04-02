@@ -1,42 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lauracatta</title>
+    <title>Laura Cattabianchi</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application' %>
   </head>
 
   <body>
-    <div class="d-flex">
-      <div class="col-6 col-md-4 col-lg-3">
-        <%= render 'layouts/left_bar' %>
+    <div class="lauras-flexbox">
+      <%= render 'layouts/left_bar' %>
+
+      <div class="cards-set">
+        <%= yield %>
       </div>
-      <div class="col-6 col-md-6 col-lg-7 d-flex flex-wrap main-content">
-        <div class="white-gradient-top"></div>
-        <div class="cards-set">
-          <%= yield %>
-        </div>
-      </div>
-      <% if user_signed_in? %>
-        <div class="col mt-5 options">
-          <div class="btn btn-danger darklogout">
-            <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-          </div>
-          <div class="btn btn-primary darklogout">
-            <%= link_to 'Tutti', articles_path %>
-          </div>
-          <div class="btn btn-success darklogout">
-            <%= link_to 'Nuovo', new_article_path %>
-          </div>
-          <!-- add more buttons here -->
-        </div>
-      <% end %>
+
+      <%= render 'layouts/flashes' %>
     </div>
-    <%#= render 'layouts/flashes' %>
+
+    <%= javascript_pack_tag 'application' %>
   </body>
 </html>

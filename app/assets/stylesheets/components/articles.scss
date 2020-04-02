@@ -1,6 +1,24 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.cards-set {
+  display: flex;
+  flex-wrap: wrap;
+  width: 65%;
+  margin: 220px 0 50px 0;
+  .apps {
+    border: solid 7px #4cbcd7;
+  }
+  .actu {
+    border: solid 7px #4cab72;
+  }
+  .atelier {
+    border: solid 7px #594ca3;
+  }
+  .formation {
+    border: solid 7px #ffa64c;
+  }
+}
 a {
   text-decoration: none !important;
 }
@@ -15,7 +33,6 @@ a {
   padding: 10px;
   color: black;
   position: relative;
-  border: solid 7px #4cab72;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,11 +77,6 @@ a {
   margin-top: 230px;
 }
 
-.cards-set {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
 
 .article-show {
   align-items: center;
@@ -107,9 +119,7 @@ form {
   width: 100%;
   display: block;
 }
-#article_subtitle {
-  margin-right: 20px;
-}
+
 trix-editor {
   min-height: 200px;
   border: #dfdfdf 2px solid;
