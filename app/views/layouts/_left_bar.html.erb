@@ -1,10 +1,8 @@
 <div class="nav-bar-left">
-  <%= link_to root_path do  %>
-    <div class="logo">
-      <h1>LAURA CATTABIANCHI</h1>
-      <!-- <h4>Formatrice et médiatrice multimédia</h4> -->
-    </div>
-  <% end %>
+  <%= link_to "LAURA CATTABIANCHI", root_path, class: "home-btn"  %>
+
+
+
   <div class="menu">
     <!-- images en png : 155px x 55px-->
     <div id="but1" class="button one">
@@ -48,26 +46,19 @@
         <%= image_tag "roche", alt: "buttonbg" %>
       <% end %>
     </div>
-
-    <!-- <div id="but7" class="button blacktext">
-      <%#= link_to "#" do %>
-        <h5>Partenaires</h5>
-        <%#= image_tag "pave7", alt: "buttonbg" %>
-      <%# end %>
-    </div>
-
-    <div id="but8" class="button blacktext">
-      <%#= link_to "#" do  %>
-        <h5>Qui suis-je ?</h5>
-        <%#= image_tag "pave8", alt: "buttonbg" %>
-      <%# end %>
-    </div>
-
-    <div id="but9" class="button blacktext">
-      <%#= link_to new_contact_path do  %>
-        <h5>Contact</h5>
-        <%#= image_tag "pave9", alt: "buttonbg" %>
-      <%# end %>
-    </div> -->
   </div>
+  <% if user_signed_in? %>
+    <div class="options">
+      <div class="btn-danger darklogout">
+        <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
+      </div>
+      <div class="btn-primary darklogout">
+        <%= link_to 'Tutti', articles_path %>
+      </div>
+      <div class="btn-success darklogout">
+        <%= link_to 'Nuovo', new_article_path %>
+      </div>
+      <!-- add more buttons here -->
+    </div>
+  <% end %>
 </div>

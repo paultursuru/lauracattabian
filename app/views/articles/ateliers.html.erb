@@ -1,6 +1,6 @@
 <% @articles.each do |article| %>
   <%= link_to article_path(article) do  %>
-    <div class="article_card" style="background-image: url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
+    <div class="article_card <%= article.category%>" style="background-image: url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
       <h5 class="title"><%= article.title %></h5>
     </div>
   <% end %>

@@ -1,3 +1,30 @@
+  .h5-with-margin {
+    margin: 0 0 30px 0;
+  }
+#new_article, .edit_article {
+  .titre-soustitre {
+    display: flex;
+    justify-content: space-between;
+    .soustitre {
+      flex-grow: 1;
+      #article_subtitle {
+        margin-left: 10%;
+        width: 90%;
+      }
+    }
+  }
+  .categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    label {
+      margin: 0;
+    }
+  }
+}
+
 trix-editor {
   border: 1px solid #bbb;
   border-radius: 3px;
