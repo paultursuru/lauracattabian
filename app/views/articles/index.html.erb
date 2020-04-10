@@ -1,6 +1,6 @@
 <% @articles.each do |article| %>
   <div class="article_card <%= article.category%>" style=" url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
-    <h1><%= article.title %></h1>
+    <h5><%= article.title %></h5>
     <div class="d-block action-block">
       <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
       <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
