@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
 
   # actions for categories
   def partenaires
-    @articles = Article.where(category: 'partenaire')
+    @articles = Article.where(category: 'partenaire').order(title: :asc)
   end
 
   def applications
