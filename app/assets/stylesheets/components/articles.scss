@@ -1,23 +1,23 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.apps {
+  border: solid 7px #4cbcd7;
+}
+.actu {
+  border: solid 7px #4cab72;
+}
+.atelier {
+  border: solid 7px #594ca3;
+}
+.formation {
+  border: solid 7px #ffa64c;
+}
 .cards-set {
   display: flex;
   flex-wrap: wrap;
   width: 65%;
   margin: 220px 0 50px 0;
-  .apps {
-    border: solid 7px #4cbcd7;
-  }
-  .actu {
-    border: solid 7px #4cab72;
-  }
-  .atelier {
-    border: solid 7px #594ca3;
-  }
-  .formation {
-    border: solid 7px #ffa64c;
-  }
 }
 a {
   text-decoration: none !important;
