@@ -55,8 +55,9 @@
 .button {
   position: relative;
   padding: 0px 0;
-  margin: -9px;
+  margin: -9px 0;
   z-index: 1;
+  width: max-content;
   h5 {
     position: absolute;
     top: 17px;
@@ -90,6 +91,7 @@
 
 .menu {
   margin-top: 100px;
+  width: max-content;
 }
 .darklogout {
   margin: 5px;
