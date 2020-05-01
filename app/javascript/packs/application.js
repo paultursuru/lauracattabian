@@ -28,9 +28,9 @@ document.addEventListener('turbolinks:load', () => {
   // Listen for click events, but only on our triggers
   window.addEventListener('click', (ev) => {
     const elm = ev.target;
-    // if (triggers.includes(elm)) {
+    if (triggers.includes(elm)) {
       const selector = elm.getAttribute('data-target');
       collapse(selector, 'toggle');
-    // }
+    }
   }, false);
 });
