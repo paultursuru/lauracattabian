@@ -14,7 +14,7 @@
   </div>
   <div>|</div>
   <div class="current-category">
-    <%= link_to "#{@article.category}s", category_path(@article.category) %>
+    <%= link_to "#{@article.category}s", category_path(category: @article.category) %>
   </div>
 </div>
 <div class="block collapse first">
