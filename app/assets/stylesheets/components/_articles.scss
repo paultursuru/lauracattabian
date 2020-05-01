@@ -12,6 +12,15 @@
   max-width: 900px;
 }
 
+.partenaire_img {
+  display: flex;
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
 
 
 
@@ -81,17 +90,6 @@ a {
 }
 
 
-.partenaire_img {
-  display: flex;
-  height: 150px;
-  width: 150px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(10, 10, 10, 0.2);
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .card_block {
