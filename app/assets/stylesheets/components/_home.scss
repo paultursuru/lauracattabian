@@ -16,9 +16,14 @@
     .btn-with-rock {
       animation: 2s cubic-bezier(.31,1.59,.49,1) animateButtons;
       margin: -5px;
+      &:hover {
+        img {
+          opacity: 0.8;
+        }
+      }
       img {
         width: 240px;
-        opacity: 0.75;
+        opacity: 0.7;
       }
 
       p {
@@ -31,8 +36,24 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        animation: 1s cubic-bezier(.63,.3,.19,.97) animateChangingColor;
         color: white;
       }
+    }
+    .z-1 {
+      z-index: 20;
+    }
+    .z-2 {
+      z-index: 19;
+    }
+    .z-3 {
+      z-index: 18;
+    }
+    .z-4 {
+      z-index: 17;
+    }
+    .z-5 {
+      z-index: 16;
     }
   }
 }
@@ -43,6 +64,15 @@
   }
   100% {
     margin: -5px;
+  }
+}
+
+@keyframes animateChangingColor {
+  0% {
+    color: transparent;
+  }
+  100% {
+    color: white;
   }
 }
 
