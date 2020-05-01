@@ -3,25 +3,25 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %I[show, edit, update, destroy]
 
   # actions for categories
-  def partenaires
-    @articles = Article.where(category: 'partenaire').order(title: :asc)
-  end
+  # def partenaires
+  #   @articles = Article.where(category: 'partenaire').order(title: :asc)
+  # end
 
-  def applications
-    @articles = Article.where(category: 'apps')
-  end
+  # def applications
+  #   @articles = Article.where(category: 'apps')
+  # end
 
-  def actualites
-    @articles = Article.where(category: 'actu')
-  end
+  # def actualites
+  #   @articles = Article.where(category: 'actu')
+  # end
 
-  def ateliers
-    @articles = Article.where(category: 'atelier')
-  end
+  # def ateliers
+  #   @articles = Article.where(category: 'atelier')
+  # end
 
-  def formations
-    @articles = Article.where(category: 'formation')
-  end
+  # def formations
+  #   @articles = Article.where(category: 'formation')
+  # end
 
   # def livres
   #   @articles = Article.where(category: 'Livre')
@@ -32,8 +32,11 @@ class ArticlesController < ApplicationController
   # end
 
   def by_category
-    redirect_to home_path if params[:category] == "archive"
+    user_admin? if params[:category] == "archive"
+
     @articles = Article.where(category: params[:category])
+    @articles.order(title: :asc) if params[:category] == "partenaire"
+
     redirect_to home_path if @articles.empty?
   end
   # CRUD for admin
@@ -79,6 +82,12 @@ class ArticlesController < ApplicationController
   end
 
   private
+
+  def user_admin?
+    if user_signed_in?
+      redirect_to root_path unless current_user.role == "admin"
+    end
+  end
 
   def set_article
     @article = Article.find(params[:id])
