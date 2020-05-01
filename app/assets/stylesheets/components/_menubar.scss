@@ -16,7 +16,12 @@
   &:hover {
     text-decoration: none;
   }
+  .backlink {
+    margin: 0 10px 0 -26px;
+    color: black;
+  }
 }
+
 .block.collapse.first:not(.show) {
   display: none;
   position: absolute;
