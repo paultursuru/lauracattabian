@@ -1,4 +1,5 @@
-<div class="article-show <%#= @article.category%>">
+<%= link_to "#{@article.category}s", category_path(category: @article.category), class: "categories-menu" %>
+<div class="article-view <%#= @article.category%>">
   <h1><%= @article.title %></h1>
   <h3><%= @article.subtitle %></h3>
   <% if @article.category == 'Actualité' %>
