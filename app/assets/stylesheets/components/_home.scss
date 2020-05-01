@@ -1,0 +1,48 @@
+
+/* Feuille de style intégrée #5 | http://localhost:3000/home */
+
+.home-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .home-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .btn-with-rock {
+      animation: 2s cubic-bezier(.31,1.59,.49,1) animateButtons;
+      margin: -5px;
+      img {
+        width: 240px;
+        opacity: 0.75;
+      }
+
+      p {
+        position: absolute;
+        margin: 0;
+        font-size: 1.5rem;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+      }
+    }
+  }
+}
+
+@keyframes animateButtons {
+  0% {
+    margin: -40px;
+  }
+  100% {
+    margin: -5px;
+  }
+}
+

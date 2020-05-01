@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'welcome#index'
-  get 'welcome/index'
-  get 'welcome/bio'
-  get 'welcome/contact'
+  root 'pages#index'
+  get 'pages/index'
+  get 'home', to: "pages#home", as: "home"
+  get 'pages/bio'
+  get 'pages/contacts', to: "pages#contacts", as: "contacts"
 
+  get 'category', to: "articles#by_category", as: "category"
   get 'articles/partenaires'
   get 'articles/applications'
   get 'articles/actualites'

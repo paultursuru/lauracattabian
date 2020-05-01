@@ -1,10 +1,6 @@
 // libraries
 @import "bootstrap/scss/bootstrap";
-@import "components/trix";
 // pages
 @import "welcome";
 // components
-@import "components/articles";
-@import "components/navbar";
-@import "components/contactform";
-@import "components/layout";
+@import "components/index"
