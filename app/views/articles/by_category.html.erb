@@ -12,7 +12,7 @@
 <div class="flex-article-list">
   <% @articles.each do |article| %>
     <%= link_to(article_path(article), html_options = {class: "article-link"} )do  %>
-      <div class="article-btn <%#= article.category%>" style="background-image: url('<%= cl_image_path article.photo.key, height: 150, width: 150, crop: :fill %>')">
+      <div class="article-btn <%#= article.category%>" style="background-image: url('<%= cl_image_path article.photo.key, height: 110, width: 110, crop: :fill %>')">
       </div>
     <% end %>
   <% end %>
