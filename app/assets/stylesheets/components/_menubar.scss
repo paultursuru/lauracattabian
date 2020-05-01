@@ -1,18 +1,32 @@
+
 .categories-menu {
   cursor: pointer;
   width: 100%;
   /*! text-align: center; */
   display: flex;
   justify-content: center;
-  box-shadow: 0 0 10px rgba(50,50, 50, 0.2);
-  height: 30px;
+  // box-shadow: 0 0 10px rgba(50,50, 50, 0.2);
+  // height: 30px;
   align-items: center;
   position: fixed;
   z-index: 10;
-  margin: 0;
+  padding: 10px 0;
   color: black;
   background: white;
   top: 0;
+  .link-to-collapse, .current-category {
+    margin: 0 10px;
+    a {
+      color: black;
+    }
+  }
+  .favicon-img {
+    width: 40px;
+    margin: 0 12px 0 0;
+    .navbar-roche {
+      height: 12px;
+    }
+  }
   &:hover {
     text-decoration: none;
   }

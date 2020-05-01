@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root 'pages#index'
-  get 'pages/index'
+  root 'pages#home'
   get 'home', to: "pages#home", as: "home"
   get 'pages/bio'
   get 'pages/contacts', to: "pages#contacts", as: "contacts"

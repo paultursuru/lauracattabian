@@ -1,19 +1,26 @@
 <div class="categories-menu">
-  <%= link_to category_path(category: @article.category), class: "z-1 backlink" do %>
-  <i class="fas fa-arrow-circle-left"></i>
-  <% end %>
-
-  <a class="z-1"
-    data-toggle="collapse"
-    data-target=".collapse.first"
-    data-text="Collapse">
-  Laura Cattabianchi
-</a>
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
+  </div>
+  <div class="link-to-collapse">
+    <a  class=""
+        data-toggle="collapse"
+        data-target=".collapse.first"
+        data-text="Collapse">
+        palomitas
+    </a>
+  </div>
+  <div>|</div>
+  <div class="current-category">
+    <%= link_to "#{@article.category}s", category_path(@article.category) %>
+  </div>
+</div>
 <div class="block collapse first">
     <div class="block__content">
     <%= render "pages/home" %>
   </div>
-</div>
 </div>
 <div class="article-view <%#= @article.category%>">
   <h1><%= @article.title %></h1>

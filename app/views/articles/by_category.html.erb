@@ -1,9 +1,22 @@
-<a  class="categories-menu"
-    data-toggle="collapse"
-    data-target=".collapse.first"
-    data-text="Collapse">
-  Laura Cattabianchi
-</a>
+<div class="categories-menu">
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
+  </div>
+  <div class="link-to-collapse">
+    <a  class=""
+        data-toggle="collapse"
+        data-target=".collapse.first"
+        data-text="Collapse">
+        palomitas
+    </a>
+  </div>
+  <div>|</div>
+  <div class="current-category">
+    <%= link_to "#{params[:category]}s", category_path(category: params[:category]) %>
+  </div>
+</div>
 <div class="block collapse first">
     <div class="block__content">
     <%= render "pages/home" %>
