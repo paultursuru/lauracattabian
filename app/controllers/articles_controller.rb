@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:partenaires, :applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
+  skip_before_action :authenticate_user!, only: [:by_category, :partenaires, :applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
   before_action :set_article, only: %I[show, edit, update, destroy]
 
   # actions for categories
@@ -31,6 +31,11 @@ class ArticlesController < ApplicationController
   #   @articles = Article.where(category: 'Musique')
   # end
 
+  def by_category
+    redirect_to home_path if params[:category] == "archive"
+    @articles = Article.where(category: params[:category])
+    redirect_to home_path if @articles.empty?
+  end
   # CRUD for admin
 
   def index
