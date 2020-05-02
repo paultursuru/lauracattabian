@@ -35,13 +35,17 @@
     color: black;
   }
 }
-
-.block.collapse.first:not(.show) {
-  display: none;
+.collapse.hide {
+  animation: 1s ease hidding !important;
+}
+.collapse {
+  display: flex;
   position: absolute;
   top: 0px;
+  opacity: 0;
+  z-index: -1;
 }
-.block.collapse.first.show {
+.collapse.show {
   position: absolute;
   top: 0px;
   z-index: 0;
@@ -50,6 +54,20 @@
   background: white;
 }
 
+
+@keyframes hidding {
+  0% {
+    opacity: 1;
+    background: white;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    background: transparent;
+    z-index: -1;
+    display: none;
+  }
+}
 @keyframes gradientBg {
   0% {
     opacity: 0;

@@ -5,10 +5,7 @@
     <% end %>
   </div>
   <div class="link-to-collapse">
-    <a  class=""
-        data-toggle="collapse"
-        data-target=".collapse.first"
-        data-text="Collapse">
+    <a  id="collapsor">
         palomitas
     </a>
   </div>
@@ -17,7 +14,7 @@
     <%= link_to "#{@article.category}s", category_path(category: @article.category) %>
   </div>
 </div>
-<div class="block collapse first">
+<div id="toCollapse" class="collapse">
     <div class="block__content">
     <%= render "pages/home" %>
   </div>
