@@ -48,7 +48,7 @@
 .collapse.show {
   position: absolute;
   top: 0px;
-  z-index: 0;
+  z-index: 1;
   animation: 1s ease gradientBg;
   opacity: 1;
   background: white;

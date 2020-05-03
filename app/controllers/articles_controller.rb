@@ -32,10 +32,11 @@ class ArticlesController < ApplicationController
   # end
 
   def by_category
-    user_admin? if params[:category] == "archive"
+    @category = params[:category]
+    user_admin? if @category == "archive"
 
-    @articles = Article.where(category: params[:category])
-    @articles.order(title: :asc) if params[:category] == "partenaire"
+    @articles = Article.where(category: @category)
+    @articles.order(title: :asc) if @category == "partenaire"
 
     redirect_to home_path if @articles.empty?
   end

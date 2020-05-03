@@ -1,7 +1,30 @@
-<div class="bio-card">
-  <%= image_tag "portrait", alt: "Portrait of Laura © Juan Jerez"%>
-  <p class="legend">Portrait of Laura © Juan Jerez</p>
+<div class="categories-menu">
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
+  </div>
+  <div class="link-to-collapse">
+    <a  id="collapsor" >
+      palomitas
+    </a>
+  </div>
+  <div>|</div>
+  <div class="current-category">
+    contacts
+  </div>
+</div>
+<div id="toCollapse" class="collapse">
+    <div class="block__content">
+    <%= render "pages/home" %>
+  </div>
+</div>
+
+<div id="category" class="contacts">
   <p>
-    Laura grandit au bord du fleuve Adige en Italie. Après un Master en Science du spectacle et de la production multimédia, elle arrive en France pour poursuivre ses études en documentation et médiation. Elle intègre l’équipe de La Gaîté Lyrique en 2013 en tant que documentaliste et médiatrice multimédia où elle crée les ateliers “Appli’quons-nous !” qui imaginent des relations plus créatives aux écrans. Passionnée par les langues et les histoires, c’est par les biais d’une tablette que Laura rencontre Dulala. D’abord chargée de projet pour la création de l’application web “Les Kamishibaïs plurilingues”, elle intègre ensuite l’équipe en tant que formatrice.
+Après avoir étudié l’histoire du cinéma en Italie, mon pays natal, je suis arrivée en France pour poursuivre mes études en documentation et médiation.
+En 2013 j’ai intégré l’équipe de la Gaîté Lyrique, lieu dédié aux cultures numériques, en tant que documentaliste et médiatrice multimédia. C’est à la Gaîté que j’ai découvert l’offre d’applications sur tablettes à destination des enfants et des adultes dont je suis de près l’évolution. Afin de mettre en valeur cette création numérique j’ai créé les ateliers “Appli’quons-nous !” qui imaginent une relation plus créative et dynamique aux écrans et mettent en valeur la complémentarité des média.
+Je partage cette expérience avec les étudiants de l’Université Sorbonne Nouvelle à Paris et de Rennes 2 et je développe des formations autour de la médiation sur tablette et l’éducation aux média en lien avec plusieurs structures telle que La Souris Grise, la Bibliothèque Nationale de France, Cinémas 93. Intéressée par les langues et la transmission, je collabore avec l'association DULALA en menant des formations autour de l’éveil aux langues.
+Passionnée par les histoires, les sons et le numérique, je réalise des projets personnels qui croisent les disciplines artistiques et les regards.
   </p>
 </div>

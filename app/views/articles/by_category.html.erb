@@ -19,6 +19,34 @@
     <%= render "pages/home" %>
   </div>
 </div>
+<div id="category">
+  <% if @category == "formation" %>
+    <%= image_tag "roche", alt: "formations" %>
+    <p>
+      Je développe des formations autour de la médiation sur tablette et de
+      l’éducation aux média en lien avec plusieurs universités et structures
+      telle que La Souris Grise, la Bibliothèque Nationale de France, Cinémas
+      93. Intéressée par les langues et la transmission, je collabore avec
+      l'association DULALA en menant des formations autour de l’éveil aux
+      langues.
+    </p>
+  <% elsif @category == "atelier" %>
+    <%= image_tag "roche2", alt: "ateliers" %>
+    <p>
+      Recherchant une relation plus créative et dynamique aux écrans, je conçois
+       et mène des ateliers qui combinent la pratique artistique,
+       l'expérimentation et la complémentarité des média (livres, applications,
+       films, etc.).
+    </p>
+  <% elsif @category == "projet" %>
+    <%= image_tag "roche3", alt: "projets" %>
+    <p>
+      projets transversaux autour de la création numérique et de la littérature
+      jeunesse, de la médiation et de l’éducation aux média, de l’éveil aux
+      langues et de la création sonore.
+    </p>
+  <% end %>
+</div>
 <div class="flex-article-list">
   <% @articles.each do |article| %>
     <% if article.category == "partenaire" %>

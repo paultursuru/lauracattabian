@@ -21,28 +21,27 @@
   justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-.apps {
-  border: solid 7px #4cbcd7;
+.partenaire {
+  background-image: url("roche4");
 }
-.actu {
-  border: solid 7px #4cab72;
+.projet {
+  background-image: url("roche3");
 }
 .atelier {
-  border: solid 7px #594ca3;
+  background-image: url("roche2");
 }
 .formation {
-  border: solid 7px #ffa64c;
+  background-image: url("roche");
 }
+
+
+
+
+
+
+
+
+
 .cards-set {
   display: flex;
   flex-wrap: wrap;
