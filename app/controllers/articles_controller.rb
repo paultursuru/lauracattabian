@@ -1,35 +1,8 @@
 class ArticlesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:by_category, :partenaires, :applications, :actualites, :ateliers, :formations, :livres, :musiques, :show]
+  skip_before_action :authenticate_user!, only: [:by_category, :show]
+  before_action :user_admin?, only: [:new, :create, :edit, :update, :destroy]
   before_action :set_article, only: %I[show, edit, update, destroy]
 
-  # actions for categories
-  # def partenaires
-  #   @articles = Article.where(category: 'partenaire').order(title: :asc)
-  # end
-
-  # def applications
-  #   @articles = Article.where(category: 'apps')
-  # end
-
-  # def actualites
-  #   @articles = Article.where(category: 'actu')
-  # end
-
-  # def ateliers
-  #   @articles = Article.where(category: 'atelier')
-  # end
-
-  # def formations
-  #   @articles = Article.where(category: 'formation')
-  # end
-
-  # def livres
-  #   @articles = Article.where(category: 'Livre')
-  # end
-
-  # def musiques
-  #   @articles = Article.where(category: 'Musique')
-  # end
 
   def by_category
     @category = params[:category]
@@ -48,6 +21,7 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    user_admin? if @article.category == "archive"
   end
 
   def new
@@ -86,7 +60,9 @@ class ArticlesController < ApplicationController
 
   def user_admin?
     if user_signed_in?
-      redirect_to root_path unless current_user.role == "admin"
+      redirect_to root_path unless current_user.admin
+    else
+      redirect_to root_path
     end
   end
 

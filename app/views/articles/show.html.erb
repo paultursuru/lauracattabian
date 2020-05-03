@@ -14,6 +14,8 @@
     <%= link_to "#{@article.category}s", category_path(category: @article.category) %>
   </div>
 </div>
+<%= render "pages/adminbar" %>
+
 <div id="toCollapse" class="collapse">
     <div class="block__content">
     <%= render "pages/home" %>

@@ -14,6 +14,9 @@
     <%= link_to "#{params[:category]}s", category_path(category: params[:category]) %>
   </div>
 </div>
+
+<%= render "pages/adminbar" %>
+
 <div id="toCollapse" class="collapse">
     <div class="block__content">
     <%= render "pages/home" %>
@@ -41,7 +44,7 @@
   <% elsif @category == "projet" %>
     <%= image_tag "roche3", alt: "projets" %>
     <p>
-      projets transversaux autour de la création numérique et de la littérature
+      Projets transversaux autour de la création numérique et de la littérature
       jeunesse, de la médiation et de l’éducation aux média, de l’éveil aux
       langues et de la création sonore.
     </p>

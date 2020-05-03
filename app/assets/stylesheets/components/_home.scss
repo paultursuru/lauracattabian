@@ -55,6 +55,15 @@
 .z-5 {
   z-index: 16;
 }
+
+#new_user {
+  width: 20vw;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 @keyframes animateButtons {
   0% {
     margin: -40px;

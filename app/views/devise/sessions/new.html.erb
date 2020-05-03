@@ -1,18 +1,42 @@
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: false,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-    <%= f.input :password,
-                required: false,
-                input_html: { autocomplete: "current-password" } %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+<div class="categories-menu">
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Log in", class: "btn btn-outline-primary" %>
+  <div class="link-to-collapse">
+    <a  id="collapsor" >
+        palomitas
+    </a>
   </div>
-<% end %>
+  <div></div>
+  <div class="current-category">
+  </div>
+</div>
 
-<%#= render "devise/shared/links" %>
+<%= render "pages/adminbar" %>
+
+<div id="toCollapse" class="collapse">
+    <div class="block__content">
+    <%= render "pages/home" %>
+  </div>
+</div>
+
+<div class="flex-article-list admin-mt">
+  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-inputs">
+      <%= f.input :email,
+                  required: false,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" } %>
+      <%= f.input :password,
+                  required: false,
+                  input_html: { autocomplete: "current-password" } %>
+      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.button :submit, "Log in", class: "btn btn-outline-primary" %>
+    </div>
+  <% end %>
+</div>

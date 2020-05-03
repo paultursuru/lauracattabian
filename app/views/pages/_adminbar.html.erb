@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <% if current_user.admin %>
+    <div class="admin-bar">
+      <%= link_to "new", new_article_path %>
+      <%= link_to "tutti", articles_path %>
+      <%= link_to "log out", destroy_user_session_path, method: :delete %>
+    </div>
+  <% end %>
+<% end %>

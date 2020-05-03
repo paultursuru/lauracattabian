@@ -16,8 +16,12 @@
   }
 }
 
-.flex-article-list.partenaire {
-  width: 80vw;
+.flex-article-list.partenaire, .flex-article-list.admin {
+    width: 80vw;
+}
+
+.flex-article-list.admin-mt {
+  margin: 75px 0;
 }
 
 #category {

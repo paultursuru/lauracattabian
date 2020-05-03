@@ -1,33 +1,28 @@
-<h5 class="h5-with-margin">Modifier cet article</h5>
-<%= form_for(@article)do |f| %>
-    <div class="titre-soustitre">
-      <%= f.text_field :title, placeholder: "Titre" %>
-      <div class="soustitre">
-        <%= f.text_field :subtitle, placeholder: "Soustitre ou URL pour les partenaires" %>
-      </div>
-    </div>
-    <div class="my-4">
-      <%= f.rich_text_area :content %>
-    </div>
-    <div class="categories">
-      <%= f.radio_button :category, 'projet' %>
-      <%= label :category_application, 'Projets' %>
-      <%= f.radio_button :category, 'atelier' %>
-      <%= label :category_atelier, 'Ateliers' %>
-      <%= f.radio_button :category, 'formation' %>
-      <%= label :category_formation, 'Formations' %>
-      <%= f.radio_button :category, 'partenaire' %>
-      <%= label :category_partenaire, 'Partenaires' %>
-      <%= f.radio_button :category, 'archive' %>
-      <%= label :category_archive, 'Archives' %>
-    </div>
-    <%#= f.text_field :legend, placeholder: "Légende pour la photo" %>
-    <%= f.file_field :photo, as: :file %>
-    <div class="my-4">
-      <%= f.button :submit, class: 'btn btn-outline-success' %>
-    </div>
-<% end %>
+<div class="categories-menu">
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
+  </div>
+  <div class="link-to-collapse">
+    <a  id="collapsor" >
+        palomitas
+    </a>
+  </div>
+  <div></div>
+  <div class="current-category">
+  </div>
+</div>
 
+<%= render "pages/adminbar" %>
 
+<div id="toCollapse" class="collapse">
+    <div class="block__content">
+    <%= render "pages/home" %>
+  </div>
+</div>
 
-
+<div class="flex-article-list admin">
+  <h5 class="h5-with-margin">Modifier cet article</h5>
+  <%= render "form" %>
+</div>

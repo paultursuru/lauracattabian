@@ -55,6 +55,14 @@
 }
 
 
+.admin-bar {
+  position: fixed;
+  top: 40px;
+  width: 100vw;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
 @keyframes hidding {
   0% {
     opacity: 1;

@@ -1,9 +1,35 @@
-<% @articles.each do |article| %>
-  <div class="article_card <%= article.category%>" style=" url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
-    <h5><%= article.title %></h5>
-    <div class="d-block action-block">
-      <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
-      <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
-    </div>
+<div class="categories-menu">
+  <div class="favicon-img">
+    <%= link_to root_path do %>
+      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+    <% end %>
   </div>
-<% end %>
+  <div class="link-to-collapse">
+    <a  id="collapsor" >
+        palomitas
+    </a>
+  </div>
+  <div></div>
+  <div class="current-category">
+  </div>
+</div>
+
+<%= render "pages/adminbar" %>
+
+<div id="toCollapse" class="collapse">
+    <div class="block__content">
+    <%= render "pages/home" %>
+  </div>
+</div>
+
+<div class="flex-article-list admin-mt">
+  <% @articles.each do |article| %>
+    <div class="article_card" style=" url('<%= cl_image_path article.photo.key, height: 200, width: 200, crop: :fill %>')">
+      <h5><%= article.title %></h5>
+      <div class="d-block action-block">
+        <div class="action-butn"><%= link_to "✏️", edit_article_path(article)  %></div>
+        <div class="action-butn"><%= link_to "🗑", article_path(article), method: :delete, data: {confirm: "sei sicuro ?"} %></div>
+      </div>
+    </div>
+  <% end %>
+</div>
