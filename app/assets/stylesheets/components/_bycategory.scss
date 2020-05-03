@@ -1,6 +1,6 @@
 .flex-article-list {
   display: flex;
-  width: 80vw;
+  width: 100vw;
   height: 100vh;
   justify-content: center;
   align-items: start;
@@ -16,6 +16,10 @@
   }
 }
 
+.flex-article-list.partenaire {
+  width: 80vw;
+}
+
 #category {
   height: max-content;
   border-bottom: solid 1px black;
@@ -27,7 +31,6 @@
     margin: 0;
   }
 }
-
 .contacts {
   width: 80%;
   height: max-content;

@@ -47,7 +47,7 @@
     </p>
   <% end %>
 </div>
-<div class="flex-article-list">
+<div class="flex-article-list <%= @category %>">
   <% @articles.each do |article| %>
     <% if article.category == "partenaire" %>
         <div class="partenaire_img">
