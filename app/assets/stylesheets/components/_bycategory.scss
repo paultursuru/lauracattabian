@@ -27,12 +27,12 @@
 
 #category {
   height: max-content;
-  border-bottom: solid 1px black;
-  width: 80%;
+  // border-bottom: solid 1px black;
+  width: 100%;
+  padding: 0px;
   margin: 90px auto 5px;
-  padding: 0 0 30px 0px;
   p {
-    font-size: 14px;
+    font-size: 20px;
     margin: 0;
   }
 }
@@ -60,7 +60,8 @@
 
 @media (min-width: 760px) {
   #category.articles {
-    height: 250px;
+    min-height: 220px;
+    background: #40A669;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,9 +69,10 @@
       width: 600px;
       transform: rotate(3deg);
       opacity: 0.75;
+      display: none;
     }
     p {
-      width: 400px;
+      width: 900px;
       padding: 0 80px;
       color: white;
       position: absolute;
