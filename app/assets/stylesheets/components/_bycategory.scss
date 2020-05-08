@@ -18,6 +18,7 @@
 
 .flex-article-list.partenaire, .flex-article-list.admin {
     width: 80vw;
+    height: max-content;
 }
 
 .flex-article-list.admin-mt {
@@ -28,7 +29,7 @@
   height: max-content;
   border-bottom: solid 1px black;
   width: 80%;
-  margin: 60px auto 5px;
+  margin: 90px auto 5px;
   padding: 0 0 30px 0px;
   p {
     font-size: 14px;
@@ -59,7 +60,7 @@
 
 @media (min-width: 760px) {
   #category.articles {
-    height: 200px;
+    height: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
