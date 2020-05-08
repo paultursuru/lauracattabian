@@ -21,6 +21,40 @@
   justify-content: center;
 }
 
+
+.h5-with-margin {
+  margin: 10vw 0 0 0;
+}
+
+#new_article, .edit_article {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  .titre-soustitre {
+    padding: 20px 0;
+    #article_subtitle, #article_subtitle {
+      width: 50%;
+    }
+  }
+  .text-area-trix {
+    height: max-content;
+    #article_content {
+      height: 400px;
+    }
+  }
+  .add-article-btn {
+    padding: 5px 10px;
+    border: none;
+    background: #ff8000;
+    color: white;
+    margin-top: 20px;
+  }
+}
+
+
+
+
+
 // .partenaire {
 //   background-image: url("roche4");
 // }

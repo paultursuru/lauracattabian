@@ -1,11 +1,11 @@
 <%= form_for(@article)do |f| %>
     <div class="titre-soustitre">
       <%= f.text_field :title, placeholder: "Titre" %>
-      <div class="soustitre">
+
         <%= f.text_field :subtitle, placeholder: "Soustitre ou URL pour les partenaires" %>
-      </div>
+
     </div>
-    <div class="my-4">
+    <div class="text-area-trix">
       <%= f.rich_text_area :content %>
     </div>
     <div class="categories">
@@ -22,7 +22,7 @@
     </div>
     <%#= f.text_field :legend, placeholder: "Légende pour la photo" %>
     <%= f.file_field :photo, as: :file %>
-    <div class="my-4">
-      <%= f.button :submit, class: 'btn btn-outline-success' %>
+    <div>
+      <%= f.button :submit, class: 'add-article-btn' %>
     </div>
 <% end %>

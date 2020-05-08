@@ -1,7 +1,0 @@
-<% @articles.each do |article| %>
-  <%= link_to article.subtitle, class: 'card_block', :target => "_blank" do %>
-    <div class="partenaire_img">
-      <%= cl_image_tag article.photo.key%>
-    </div>
-  <% end %>
-<% end %>
