@@ -58,19 +58,13 @@
 
 @media (min-width: 760px) {
   #category.articles {
-    min-height: 220px;
-    background: #40A669;
+    min-height: 100px;
+    // background: #40A669;
     display: flex;
     align-items: center;
     justify-content: center;
-    img {
-      width: 600px;
-      transform: rotate(3deg);
-      opacity: 0.75;
-      display: none;
-    }
     p {
-      width: 900px;
+      max-width: 900px;
       padding: 0 80px;
       color: white;
       position: absolute;
