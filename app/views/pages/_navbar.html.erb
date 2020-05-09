@@ -7,13 +7,10 @@
   </div>
   <div>|</div>
   <div class="current-category">
-    nouveau
+    <% if @article.present? %>
+      <%= link_to "#{@article.category}s", category_path(category: @article.category) %>
+    <% else %>
+      <%= link_to "#{params[:category]}s", category_path(category: params[:category]) %>
+    <% end %>
   </div>
-</div>
-
-<%= render "pages/adminbar" %>
-
-<div class="flex-article-list admin">
-  <h5 class="h5-with-margin">Ajouter un nouvel article</h5>
-  <%= render "form" %>
 </div>

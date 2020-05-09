@@ -27,13 +27,12 @@
 
 #category {
   height: max-content;
-  // border-bottom: solid 1px black;
-  width: 100%;
-  padding: 0px;
-  margin: 90px auto 5px;
+  padding: 10px 20px;
+  margin: 70px auto 50px;
   p {
-    font-size: 20px;
+    font-size: 14px;
     margin: 0;
+    color: white;
   }
 }
 .contacts {
@@ -51,7 +50,6 @@
 
 @media (max-width: 760px) {
   #category {
-    background: none;
     img {
       display: none;
     }

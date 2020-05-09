@@ -1,30 +1,9 @@
-<div class="categories-menu">
-  <div class="favicon-img">
-    <%= link_to root_path do %>
-      <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
-    <% end %>
-  </div>
-  <div class="link-to-collapse">
-    <a  id="collapsor" >
-        palomitas
-    </a>
-  </div>
-  <div>|</div>
-  <div class="current-category">
-    <%= link_to "#{params[:category]}s", category_path(category: params[:category]) %>
-  </div>
-</div>
-
+<%= render "pages/navbar" %>
 <%= render "pages/adminbar" %>
 
-<div id="toCollapse" class="collapse">
-    <div class="block__content">
-    <%= render "pages/home" %>
-  </div>
-</div>
-<div id="category" class="articles">
+<div id="category" class="articles <%= @category %>">
   <% if @category == "formation" %>
-    <%= image_tag "roche", alt: "formations" %>
+    <%#= image_tag "roche", alt: "formations" %>
     <p>
       Je développe des formations autour de la médiation sur tablette et de
       l’éducation aux média en lien avec plusieurs universités et structures
@@ -34,7 +13,7 @@
       langues.
     </p>
   <% elsif @category == "atelier" %>
-    <%= image_tag "roche2", alt: "ateliers" %>
+    <%#= image_tag "roche2", alt: "ateliers" %>
     <p>
       Recherchant une relation plus créative et dynamique aux écrans, je conçois
        et mène des ateliers qui combinent la pratique artistique,
@@ -42,18 +21,18 @@
        films, etc.).
     </p>
   <% elsif @category == "projet" %>
-    <%= image_tag "roche3", alt: "projets" %>
+    <%#= image_tag "roche3", alt: "projets" %>
     <p>
-      Projets transversaux autour de la création numérique et de la littérature
-      jeunesse, de la médiation et de l’éducation aux média, de l’éveil aux
-      langues et de la création sonore.
+      Passionnée par les histoires, les sons et les applications, je réalise
+      des projets personnels qui croisent les disciplines artistiques et les
+      regards. Des projets transversaux autour de la création numérique et de la
+      littérature jeunesse, de la médiation et de l’éducation aux média, de
+      l’éveil aux langues et de la création sonore.
+
     </p>
-  <% elsif @category == "partenaire" %>
-  <%= image_tag "roche4", alt: "partenaire" %>
-    <p></p>
   <% end %>
 </div>
-<div class="flex-article-list <%= @category %>">
+<div class="flex-article-list">
   <% @articles.each do |article| %>
     <% if article.category == "partenaire" %>
         <div class="partenaire_img">

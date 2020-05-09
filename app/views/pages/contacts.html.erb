@@ -2,23 +2,16 @@
   <div class="favicon-img">
     <%= link_to root_path do %>
       <%= image_tag "roche2", alt: "Laura Cattabianchi", class: "navbar-roche" %>
+      <p class="palomitas-name">palomitas</p>
     <% end %>
-  </div>
-  <div class="link-to-collapse">
-    <a  id="collapsor" >
-      palomitas
-    </a>
   </div>
   <div>|</div>
   <div class="current-category">
-    contacts
+    contact
   </div>
 </div>
-<div id="toCollapse" class="collapse">
-    <div class="block__content">
-    <%= render "pages/home" %>
-  </div>
-</div>
+
+<%= render "pages/adminbar" %>
 
 <div class="contacts">
   <p>
