@@ -1,4 +1,33 @@
 
+/* Feuille de style intégrée #5 | http://localhost:3000/category?category=formation */
+
+.contact-bar-fixed {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  margin: 0 auto;
+  justify-content: right;
+  width: 100%;
+  height: 40px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin: 0 10px;
+    p {
+      position: absolute;
+      color: white;
+    }
+    img {
+      margin: 0 auto;
+      height: 30px;
+      opacity: 0.6;
+    }
+  }
+}
+
+
 .categories-menu {
   cursor: pointer;
   width: 100%;
