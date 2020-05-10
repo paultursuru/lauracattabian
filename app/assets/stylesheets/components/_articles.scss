@@ -10,7 +10,11 @@
   margin: 50px auto;
   max-width: 900px;
 }
-
+@media (min-width: 700px) {
+  .article-view {
+    padding: 0 90px;
+  }
+}
 .partenaire_img {
   display: flex;
   height: 150px;
