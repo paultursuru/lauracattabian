@@ -44,7 +44,7 @@
   color: black;
   background: white;
   top: 0;
-
+  font-size: 18px;
 
 
   .link-to-collapse, .current-category {
@@ -65,7 +65,8 @@
       }
     }
     .navbar-roche {
-      height: 18px;
+      height: 20px;
+      padding: 0 10px 0 0;
     }
   }
   &:hover {

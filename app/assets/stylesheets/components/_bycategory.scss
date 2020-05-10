@@ -54,12 +54,14 @@
       display: none;
     }
   }
+  .contacts img {
+    display: none;
+  }
 }
 
 @media (min-width: 760px) {
   #category.articles {
     min-height: 100px;
-    // background: #40A669;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -68,6 +70,19 @@
       padding: 0 80px;
       color: white;
       position: absolute;
+    }
+  }
+
+  .contacts {
+    margin: 90px auto 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      width: 70%;
+    }
+    img {
+      width: 20%;
     }
   }
 }
