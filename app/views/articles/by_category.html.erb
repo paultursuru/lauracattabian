@@ -35,8 +35,8 @@
 <div class="flex-article-list">
   <% @articles.each do |article| %>
     <% if article.category == "partenaire" %>
-        <div class="partenaire_img">
-          <%= cl_image_tag article.photo.key%>
+        <div class="partenaire_img" style="background-image: url('<%= cl_image_path article.photo.key, height: 150, width: 150, crop: :fill %>')">
+          <%#= cl_image_tag article.photo.key%>
         </div>
     <% else %>
       <%= link_to(article_path(article), html_options = {class: "article-link"} )do  %>
